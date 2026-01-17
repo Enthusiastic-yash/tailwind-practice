@@ -1,0 +1,30 @@
+/* Light Theme (default) */
+:root {
+    --background: var(--color-neutral-50);
+    --forground: var(--color-neutral-700);
+}
+
+.dark {
+    --background: var(--color-neutral-950);
+    --forground: var(--color-neutral-50)
+}
+
+
+@theme {
+    --animate-marquee: marquee 5s linear infinite;
+
+    @keyframes marquee {
+        form {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-forground: var(--forground);
+}
