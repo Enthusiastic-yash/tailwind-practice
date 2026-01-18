@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted } from "vue"
+import { IconMoon, IconSun } from '@tabler/icons-vue';
 
 const Themes = ['light', 'dark']
 
@@ -31,10 +32,6 @@ if (!userPreferenceTheme) {
     media.addEventListener('change', handleChange)
 }
 
-
-
-
-
 const switchTheme = () => {
     const currentTheme = document.documentElement.classList.contains("dark") ? "light" : "dark"
     document.documentElement.classList.toggle("dark")
@@ -43,10 +40,10 @@ const switchTheme = () => {
 
 </script>
 
+
+
 <template>
     <div class="min-h-screen bg-background text-forground p-6 transition">
-        <ThemeToggle />
-
         <h1 class="text-4xl font-bold mt-6">
             Scalable Theme System 🚀
         </h1>
@@ -66,8 +63,13 @@ const switchTheme = () => {
                     reaction
                 </p>
             </div>
-            <div class="flex justify-center w-100">
-                <button class="rounded-lg cursor-pointer border-2 w-1/2 mt-4 py-2" @click="switchTheme">Switch</button>
+            <div class="relative flex justify-center w-100 h-auto ">
+                <button class="absolute rounded-lg cursor-pointer  w-1/2 mt-4 py-2" @click="switchTheme">
+                    <IconSun
+                        class="absolute inset-0 size-9 transition-all duration-300 dark:scale-0 scale-100 dark:rotate-45 m-auto" />
+                    <IconMoon
+                        class="absolute inset-0 size-9 transition-all duration-300  dark:rotate-0 rotate-45 dark:scale-100 scale-0 m-auto" />
+                </button>
             </div>
         </div>
     </div>
