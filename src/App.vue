@@ -8,3 +8,7 @@ import dark from './components/dark.vue';
     <dark />
   </div>
 </template>
+<!-- :style="{
+    backgroundImage: 'radial-gradient(var(--color-gray-300) 1px, transparent 1px)',
+    backgroundSize: '10px 10px',
+  }" -->

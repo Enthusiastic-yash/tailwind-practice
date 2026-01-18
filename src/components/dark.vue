@@ -43,7 +43,8 @@ const switchTheme = () => {
 
 
 <template>
-    <div class="min-h-screen bg-background text-forground p-6 transition">
+    <div
+        class="min-h-screen bg-background text-forground p-6 transition bg-[radial-gradient(var(--color-gray-300)_1px,transparent_1px)] bg-size-[10px_10px] mask-radial-from-50%">
         <h1 class="text-4xl font-bold mt-6">
             Scalable Theme System 🚀
         </h1>
